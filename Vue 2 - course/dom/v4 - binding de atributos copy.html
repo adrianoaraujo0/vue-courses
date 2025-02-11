@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+    <div id="app">  
+        <p>{{ titulo }}</p>
+        <p>{{ helloWorld() }}</p>
+        <a v-bind:href="link"> Google </a>
+    </div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            titulo: 'Usando VueJS!',
+            link: 'https://www.google.com.br/',
+        },
+        methods:{
+            helloWorld(){
+                return "Hello World" + " " + this.titulo;
+            }
+        }
+    })
+</script>

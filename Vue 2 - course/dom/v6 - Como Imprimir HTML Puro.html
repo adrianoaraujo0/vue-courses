@@ -1,0 +1,21 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+    <div id="app">  
+        <p v-html="linkHtml"></p>
+
+    </div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            linkHtml: '<a href="https://www.google.com.br/">Google</a>',
+        },
+        methods:{
+            somar(){
+               
+             return  this.soma = "Hello world";
+            }
+        }
+    })
+</script>

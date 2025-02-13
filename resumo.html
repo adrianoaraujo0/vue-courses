@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+    <div id="app">
+        <p> {{ titulo }} </p>
+        <input type="text" :value="initialValue" @keyup.enter="trocarTitulo">
+    </div>
+
+<script>
+
+    new Vue({
+        el:"#app",
+        data: {
+            titulo: "Testando",
+            initialValue:""
+        },
+        methods: {
+            trocarTitulo(event){
+                this.titulo = event.target.value;
+                this.initialValue = ""
+                
+            }
+        }
+    })
+
+</script>

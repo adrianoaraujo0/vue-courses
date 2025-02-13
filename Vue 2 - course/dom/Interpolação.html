@@ -1,0 +1,25 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+
+    <div id="app">
+      <p> {{ x % 2 == 0 ?  x + " Impar" : x + " Par" }}</p>
+      <button @click="somar"> Somar </button>
+    </div>
+
+
+<script>
+
+    new Vue({
+        el: "#app",
+        data:{
+            x: 0,
+        },
+        methods:{
+            somar(event){
+                this.x++;
+            }
+        },
+    })
+
+
+</script>

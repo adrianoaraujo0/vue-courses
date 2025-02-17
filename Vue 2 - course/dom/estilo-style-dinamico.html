@@ -1,0 +1,67 @@
+<script src="https://unpkg.com/vue@2"></script>
+
+    <style>
+
+        #app{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .demo{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+        }
+        
+        .c1{
+            background-color: red;
+        }
+        .c2{
+            background-color: green;
+        }
+        .c3 {
+            background-color: blue;
+        }
+    </style>
+
+    <div id="app">
+
+        <div 
+            class="demo" 
+            :style="{backgroundColor: cor, height:altura}"></div>
+
+        <div class="demo"></div>
+
+        <div class="demo" :style="[estilo, {width: '10px'}]"></div>
+
+
+        <input type="text" v-model="cor">
+        <input type="text" v-model="altura">
+        <input type="text" v-model="width">
+    </div>
+
+
+<script>
+
+    new Vue({
+        el: "#app",
+        data:{
+            cor: "red",
+            altura: 100,
+            width: 100,
+        },
+        computed:{
+            estilo(){
+                return {
+                    backgroundColor: this.cor,
+                    height: this.altura,
+                    width: this.width + 'px'
+                }
+            }
+        },
+        methods:{
+        },
+    })
+
+
+</script>
